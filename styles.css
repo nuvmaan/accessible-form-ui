@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-password {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #4f46e5;
+  font-size: 1.2rem;
+  display: none; /* Completely hide the eye icon */
+}
+
+.password-container input:focus ~ .toggle-password,
+.password-container input:not(:placeholder-shown) ~ .toggle-password {
+  display: block; /* Show the icon only when the input is focused or not empty */
+}
+
+
+.assistive-text {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  background: #4f46e5;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #4338ca;
+}
